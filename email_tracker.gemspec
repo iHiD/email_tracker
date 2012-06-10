@@ -7,11 +7,11 @@ require "email_tracker/version"
 Gem::Specification.new do |s|
   s.name        = "email_tracker"
   s.version     = EmailTracker::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of EmailTracker."
-  s.description = "TODO: Description of EmailTracker."
+  s.authors     = ["Jeremy Walker"]
+  s.email       = ["jez.walker@gmail.com"]
+  s.homepage    = "http://www.ihid.co.uk/email_tracker"
+  s.summary     = "A plugin for Rails apps that track email."
+  s.description = "A plugin for Rails apps that track email."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
