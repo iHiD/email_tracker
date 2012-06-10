@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20120610205858) do
   create_table "email_tracker_email_instances", :force => true do |t|
     t.integer  "email_id",      :null => false
     t.string   "email_address", :null => false
+    t.string   "url_code",      :null => false
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.datetime "opened_at"

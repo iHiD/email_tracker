@@ -1,22 +1,5 @@
-
+require 'spec_helper'
 module EmailTracker
-  
-=begin
-  class TitleModel < ActiveRecord::Base
-    self.table_name = :email_tracker_emails
-    def title
-      "My Title"
-    end
-  end
-  
-  class NameModel < ActiveRecord::Base
-    self.table_name = :email_tracker_emails
-    def name
-      "My Name"
-    end
-  end
-=end
-  
   describe Email do 
     it "should set name correctly" do
       
