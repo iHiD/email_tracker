@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20120610205858) do
     t.integer  "email_id",      :null => false
     t.string   "email_address", :null => false
     t.string   "url_code",      :null => false
+    t.integer  "user_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.datetime "opened_at"
@@ -34,9 +35,10 @@ ActiveRecord::Schema.define(:version => 20120610205858) do
   end
 
   create_table "email_tracker_link_instances", :force => true do |t|
-    t.integer  "link_id",           :null => false
-    t.integer  "email_instance_id", :null => false
-    t.string   "url_code",          :null => false
+    t.integer  "link_id",                                   :null => false
+    t.integer  "email_instance_id",                         :null => false
+    t.string   "url_code",                                  :null => false
+    t.boolean  "is_externally_viewable", :default => false, :null => false
     t.datetime "clicked_at"
   end
 

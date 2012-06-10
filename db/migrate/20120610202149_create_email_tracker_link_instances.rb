@@ -5,6 +5,7 @@ class CreateEmailTrackerLinkInstances < ActiveRecord::Migration
       t.integer :email_instance_id, null: false
       
       t.string :url_code, null: false
+      t.boolean :is_externally_viewable, null: false, default: false 
       
       t.datetime :clicked_at, null: true
     end

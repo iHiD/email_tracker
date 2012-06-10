@@ -16,5 +16,12 @@ module EmailTracker
       owner = mock_model(Subscription)
       Email.create!({mailer: "my_mailer", action: "my_action", owner: owner}, as: :email_tracker_internals).name.should == "Subscription ##{owner.id}"
     end
+    
+    it "should create instance" do
+      email = FactoryGirl.create(:email)
+      email.create_instance!("jez.walker@gmail.com", 1)
+      instance = email.instances.first
+      instance.email_address.should == "jez.walker@gmail.com"
+    end
   end
 end

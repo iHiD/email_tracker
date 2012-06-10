@@ -3,13 +3,35 @@ module EmailTracker
   
     belongs_to :owner, polymorphic: true
   
-    has_many :instances, class_name: "EmailTracking::EmailInstance"
+    has_many :instances, class_name: "EmailInstance"
     has_many :link_instances, through: :instances
     
-    attr_accessible :owner, :mailer, :action, as: :email_tracker_internals
+    attr_accessible :owner, :owner_type, :owner_id, :mailer, :action, as: :email_tracker_internals
     
     before_create :set_default_name
     before_create :set_default_description
+  
+    def self.for_email(data)
+    
+      hash = {
+        mailer: data[:mailer],
+        action: data[:action],
+        owner_type: data[:owner_type],
+        owner_id: data[:owner_id]
+      }
+    
+      if email = self.where(hash).first
+        return email
+      end
+    
+      email = self.new(hash, as: :email_tracker_internals)
+      email.save!
+      email
+    end
+  
+  def create_instance!(email_address, user_id)
+    instances.create!({email_address: email_address, user_id: user_id}, as: :email_tracker_internals)
+  end
   
     private
   
@@ -57,29 +79,6 @@ end
     i = link_instances.clicked
     i = i.where("clicked_at > ?", since) if since
     i.count
-  end
-  
-  def create_instance!(email_address, user_id)
-    instances.create!(email_address: email_address,
-                     user_id: user_id)
-  end
-  
-  def self.for_email(data)
-    
-    hash = {
-      mailer: data[:mailer],
-      action: data[:action],
-      owner_type: data[:owner_type],
-      owner_id: data[:owner_id]
-    }
-    
-    if email = self.where(hash).first
-      return email
-    end
-    
-    email = self.new(hash)
-    email.save!
-    email
   end
 end
 

@@ -2,7 +2,7 @@ require 'mail'
 
 # Register the interceptor, observer and subscribers
 # These all do different things to the message at different stages
-#Mail.register_interceptor(EmailTracker::Interceptor)
+Mail.register_interceptor(EmailTracker::Interceptor)
 
 # Add a private variable :tracking_data
 class Mail::Message

@@ -6,6 +6,8 @@ module EmailTracker
     has_one :email, through: :email_instance
     has_one :user, through: :email_instance
     belongs_to :link
+    
+    attr_accessible :email_instance, :is_externally_viewable, as: :email_tracker_internals
   
     scope :clicked, where("clicked_at IS NOT NULL")
   

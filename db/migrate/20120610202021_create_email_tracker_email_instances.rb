@@ -4,9 +4,9 @@ class CreateEmailTrackerEmailInstances < ActiveRecord::Migration
       
       t.integer :email_id, null:false
       
-      t.string :email_address, null: false
-      t.string :url_code,      null: false
-      #t.integer :user_id, null: true
+      t.string  :email_address, null: false
+      t.string  :url_code,      null: false
+      t.integer :user_id,       null: true
       
       t.datetime :created_at, null:false
       t.datetime :updated_at, null:false
