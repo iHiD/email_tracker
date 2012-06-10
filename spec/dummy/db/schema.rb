@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20120610205858) do
   create_table "email_tracker_link_instances", :force => true do |t|
     t.integer  "link_id",           :null => false
     t.integer  "email_instance_id", :null => false
+    t.string   "url_code",          :null => false
     t.datetime "clicked_at"
   end
 

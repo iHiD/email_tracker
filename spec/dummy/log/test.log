@@ -2510,3 +2510,509 @@ Binary data inserted for `string` type on column `url_code`
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:30:37 UTC +00:00], ["description", ""], ["mailer", "my_mailer"], ["name", "Subscription #1003"], ["owner_id", 1003], ["owner_type", "Subscription"], ["updated_at", Sun, 10 Jun 2012 21:30:37 UTC +00:00]]
   [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (0.6ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:32:36 UTC +00:00], ["description", ""], ["mailer", "My/Mailer"], ["name", "Mailer My action"], ["owner_id", nil], ["owner_type", nil], ["updated_at", Sun, 10 Jun 2012 21:32:36 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "email_tracker_links" ("created_at", "num_clicks", "updated_at", "url") VALUES (?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:32:36 UTC +00:00], ["num_clicks", 0], ["updated_at", Sun, 10 Jun 2012 21:32:36 UTC +00:00], ["url", nil]]
+SQLite3::ConstraintException: constraint failed: INSERT INTO "email_tracker_links" ("created_at", "num_clicks", "updated_at", "url") VALUES (?, ?, ?, ?)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:32:40 UTC +00:00], ["description", ""], ["mailer", "My/Mailer"], ["name", "Mailer My action"], ["owner_id", nil], ["owner_type", nil], ["updated_at", Sun, 10 Jun 2012 21:32:40 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "email_tracker_links" ("created_at", "num_clicks", "updated_at", "url") VALUES (?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:32:41 UTC +00:00], ["num_clicks", 0], ["updated_at", Sun, 10 Jun 2012 21:32:41 UTC +00:00], ["url", nil]]
+SQLite3::ConstraintException: constraint failed: INSERT INTO "email_tracker_links" ("created_at", "num_clicks", "updated_at", "url") VALUES (?, ?, ?, ?)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["description", ""], ["mailer", "My/Mailer"], ["name", "Mailer My action"], ["owner_id", nil], ["owner_type", nil], ["updated_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00]]
+  [1m[36m (29.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "email_tracker_links" ("created_at", "num_clicks", "updated_at", "url") VALUES (?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["num_clicks", 0], ["updated_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["url", "/foobar"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 12], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["url_code", "688c7310e2c550b96a249101b7c34f138f273c96"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 12], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["url_code", "8b79a1c43bf741740d966d2bd5609830a8b3f210"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 12], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["url_code", "2fdc5a01e4c94a476629c40d46b3ca03819fc70d"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  UPDATE "email_tracker_email_instances" SET "opened_at" = '2012-06-10 21:32:54.000000', "updated_at" = '2012-06-10 21:32:54.898091' WHERE "email_tracker_email_instances"."id" = 3
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "email_tracker_email_instances" WHERE (opened_at IS NOT NULL)
+  [1m[36m (1.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 12], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["url_code", "1b4293edecb8d09fa62b09db48fe0eae4abfbe55"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 12], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["url_code", "b07b9f1bf8ff2b18317b6a2759f1d305d493561d"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 12], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["url_code", "55b4626a32064e43021cad25171ac1421be60a9a"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mUPDATE "email_tracker_email_instances" SET "opened_at" = '2012-06-10 21:32:54.000000', "updated_at" = '2012-06-10 21:32:54.913440' WHERE "email_tracker_email_instances"."id" = 2[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 12], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["url_code", "ed95f78d95f144354282c774a9bdfaad1e865ae5"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "email_tracker_email_instances" SET "opened_at" = '2012-06-10 21:32:54.000000', "updated_at" = '2012-06-10 21:32:54.917502' WHERE "email_tracker_email_instances"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["description", ""], ["mailer", "My/Mailer"], ["name", "Mailer My action"], ["owner_id", nil], ["owner_type", nil], ["updated_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["description", ""], ["mailer", "my_mailer"], ["name", "My Title"], ["owner_id", 1001], ["owner_type", "Subscription"], ["updated_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["description", ""], ["mailer", "my_mailer"], ["name", "My Name"], ["owner_id", 1002], ["owner_type", "Subscription"], ["updated_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00], ["description", ""], ["mailer", "my_mailer"], ["name", "Subscription #1003"], ["owner_id", 1003], ["owner_type", "Subscription"], ["updated_at", Sun, 10 Jun 2012 21:32:54 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (21.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEmailTrackerEmails (20120610201855)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "email_tracker_emails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "mailer" varchar(255) NOT NULL, "action" varchar(255) NOT NULL, "owner_type" varchar(255), "owner_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120610201855')
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEmailTrackerEmailInstances (20120610202021)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "email_tracker_email_instances" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email_id" integer NOT NULL, "email_address" varchar(255) NOT NULL, "url_code" varchar(255) NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "opened_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120610202021')
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEmailTrackerLinks (20120610202122)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "email_tracker_links" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255) NOT NULL, "num_clicks" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120610202122')
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEmailTrackerLinkInstances (20120610202149)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "email_tracker_link_instances" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "link_id" integer NOT NULL, "email_instance_id" integer NOT NULL, "url_code" varchar(255) NOT NULL, "clicked_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120610202149')
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateSubscriptions (20120610205858)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "subscriptions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120610205858')
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("email_tracker_email_instances")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("email_tracker_emails")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("email_tracker_link_instances")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("email_tracker_links")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("subscriptions")
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["description", ""], ["mailer", "My/Mailer"], ["name", "Mailer My action"], ["owner_id", nil], ["owner_type", nil], ["updated_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "email_tracker_links" ("created_at", "num_clicks", "updated_at", "url") VALUES (?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["num_clicks", 0], ["updated_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["url", "/foobar"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 1], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["url_code", "cc4d38bfc05259ec086d58bc5e7563c2275aba47"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 1], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["url_code", "f1f218b7bec436cb84d0d4f0f50ff9211361e510"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 1], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["url_code", "404a392d075e6de7d8a79eecad98f5f339f69ab9"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  UPDATE "email_tracker_email_instances" SET "opened_at" = '2012-06-10 21:33:50.000000', "updated_at" = '2012-06-10 21:33:50.933379' WHERE "email_tracker_email_instances"."id" = 3
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "email_tracker_email_instances" WHERE (opened_at IS NOT NULL)
+  [1m[36m (10.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 1], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["url_code", "9e33f88a48e073d7fdbb14d81a2376cc9dfe50de"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 1], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["url_code", "95e6137f189b2c71f8484927d24279939ea5ed37"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 1], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["url_code", "7f50c7c9f3819999e135d5d38063ae95ddba11fe"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mUPDATE "email_tracker_email_instances" SET "opened_at" = '2012-06-10 21:33:50.000000', "updated_at" = '2012-06-10 21:33:50.958226' WHERE "email_tracker_email_instances"."id" = 2[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 1], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["url_code", "aaf72a63dcbad043548e0159ba4b5e13e5f899f4"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "email_tracker_email_instances" SET "opened_at" = '2012-06-10 21:33:50.000000', "updated_at" = '2012-06-10 21:33:50.961968' WHERE "email_tracker_email_instances"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["description", ""], ["mailer", "My/Mailer"], ["name", "Mailer My action"], ["owner_id", nil], ["owner_type", nil], ["updated_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["description", ""], ["mailer", "my_mailer"], ["name", "My Title"], ["owner_id", 1001], ["owner_type", "Subscription"], ["updated_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["description", ""], ["mailer", "my_mailer"], ["name", "My Name"], ["owner_id", 1002], ["owner_type", "Subscription"], ["updated_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00], ["description", ""], ["mailer", "my_mailer"], ["name", "Subscription #1003"], ["owner_id", 1003], ["owner_type", "Subscription"], ["updated_at", Sun, 10 Jun 2012 21:33:50 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)  [["clicked_at", nil], ["email_instance_id", nil], ["link_id", 1], ["url_code", "81811db29359559701f9e82ca4d0cf19013af412"]]
+SQLite3::ConstraintException: constraint failed: INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)[0m  [["clicked_at", nil], ["email_instance_id", nil], ["link_id", 1], ["url_code", "d34906af97d31253c7c3d184421bd32f3182f9cc"]]
+SQLite3::ConstraintException: constraint failed: INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)  [["clicked_at", nil], ["email_instance_id", nil], ["link_id", 1], ["url_code", "0aa36cbf4c3b7a269048d21c92a3dbfb90bb84ce"]]
+SQLite3::ConstraintException: constraint failed: INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)[0m  [["clicked_at", nil], ["email_instance_id", nil], ["link_id", 1], ["url_code", "ed9c1968e01cc8c56f273366f0f1bd55a2a71e09"]]
+SQLite3::ConstraintException: constraint failed: INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["description", ""], ["mailer", "My/Mailer"], ["name", "Mailer My action"], ["owner_id", nil], ["owner_type", nil], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00]]
+  [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 2], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["url_code", "18c8ce627e21fdf5c0ee09fd04633001b3ac514a"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "email_tracker_links" ("created_at", "num_clicks", "updated_at", "url") VALUES (?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["num_clicks", 0], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["url", "/foobar"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 2], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["url_code", "5eb92b1f0962a6b552e3b9ba095350712801653e"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 2], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["url_code", "278d66c28ddf75a4cd4b9436fa1dcc6ca53cc51c"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 2], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["url_code", "f855f9cf723cbcb713c1782a432570941ba074f4"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mUPDATE "email_tracker_email_instances" SET "opened_at" = '2012-06-10 21:34:30.000000', "updated_at" = '2012-06-10 21:34:30.737108' WHERE "email_tracker_email_instances"."id" = 4[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "email_tracker_email_instances" WHERE (opened_at IS NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 2], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["url_code", "87a44aabf4c319d2b5b8595d714ad1b47198945b"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 2], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["url_code", "9c10c0d2d246f9b632b45dd607b5ac7937d75e7f"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 2], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["url_code", "d1bf8680b74cf419d7d6d3fe888ed832a562213e"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  UPDATE "email_tracker_email_instances" SET "opened_at" = '2012-06-10 21:34:30.000000', "updated_at" = '2012-06-10 21:34:30.749628' WHERE "email_tracker_email_instances"."id" = 3
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 2], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["url_code", "92c1efd13b95a2afd164a449319707dc745dcfb6"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "email_tracker_email_instances" SET "opened_at" = '2012-06-10 21:34:30.000000', "updated_at" = '2012-06-10 21:34:30.753611' WHERE "email_tracker_email_instances"."id" = 2
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["description", ""], ["mailer", "My/Mailer"], ["name", "Mailer My action"], ["owner_id", nil], ["owner_type", nil], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["description", ""], ["mailer", "my_mailer"], ["name", "My Title"], ["owner_id", 1001], ["owner_type", "Subscription"], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["description", ""], ["mailer", "my_mailer"], ["name", "My Name"], ["owner_id", 1002], ["owner_type", "Subscription"], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00], ["description", ""], ["mailer", "my_mailer"], ["name", "Subscription #1003"], ["owner_id", 1003], ["owner_type", "Subscription"], ["updated_at", Sun, 10 Jun 2012 21:34:30 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)[0m  [["clicked_at", nil], ["email_instance_id", 1], ["link_id", 2], ["url_code", "bf15cc78220520bebffaad8e72cca2ba69619d9f"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)  [["clicked_at", nil], ["email_instance_id", 1], ["link_id", 2], ["url_code", "4de5ca708ae2f9e515b7a62b5e60b236284cd678"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)[0m  [["clicked_at", nil], ["email_instance_id", 1], ["link_id", 2], ["url_code", "d91b42279b2bf9a3c226adf12388f8a8437f78d1"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  UPDATE "email_tracker_link_instances" SET "clicked_at" = '2012-06-10 21:34:30.000000' WHERE "email_tracker_link_instances"."id" = 3
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "email_tracker_link_instances" WHERE (clicked_at IS NOT NULL)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)  [["clicked_at", nil], ["email_instance_id", 1], ["link_id", 2], ["url_code", "59960dca889498a8a239b7b00bacb25171b24e76"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)[0m  [["clicked_at", nil], ["email_instance_id", 1], ["link_id", 2], ["url_code", "6c6df6c5ae6f05e6ec7d99d1a758a9f8f8dcbc8b"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)  [["clicked_at", nil], ["email_instance_id", 1], ["link_id", 2], ["url_code", "a49a77026480de78217b81f12543a1a5997776d3"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mUPDATE "email_tracker_link_instances" SET "clicked_at" = '2012-06-10 21:34:30.000000' WHERE "email_tracker_link_instances"."id" = 2[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)  [["clicked_at", nil], ["email_instance_id", 1], ["link_id", 2], ["url_code", "6ee3d98033b6f48a54ff58f7cfd0186ebc6ae5e3"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["description", ""], ["mailer", "My/Mailer"], ["name", "Mailer My action"], ["owner_id", nil], ["owner_type", nil], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00]]
+  [1m[36m (26.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 3], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["url_code", "2d9caed93bf34c26f7b30685f3379650350a3d2e"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "email_tracker_links" ("created_at", "num_clicks", "updated_at", "url") VALUES (?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["num_clicks", 0], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["url", "/foobar"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 3], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["url_code", "22109cfa0f076dd31cc48caa2f412739c5801604"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 3], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["url_code", "c25af9274e0cf5b31430caf7667df06fc9602979"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 3], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["url_code", "c6a81d39d57fb50c97485e75c9958e928ceaaaa4"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mUPDATE "email_tracker_email_instances" SET "opened_at" = '2012-06-10 21:35:00.000000', "updated_at" = '2012-06-10 21:35:00.502218' WHERE "email_tracker_email_instances"."id" = 5[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "email_tracker_email_instances" WHERE (opened_at IS NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 3], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["url_code", "3fc5bb943438c762ca5b6f0d2620b878237b2304"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 3], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["url_code", "8149d3bc95d11720596eedcdca4f19a0ac6d72af"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 3], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["url_code", "69e6b60ee862964b7f338d17c1c0947cb175e6f6"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  UPDATE "email_tracker_email_instances" SET "opened_at" = '2012-06-10 21:35:00.000000', "updated_at" = '2012-06-10 21:35:00.514801' WHERE "email_tracker_email_instances"."id" = 4
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "email_tracker_email_instances" ("created_at", "email_address", "email_id", "opened_at", "updated_at", "url_code") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["email_address", "jez.walker@gmail.com"], ["email_id", 3], ["opened_at", nil], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["url_code", "2d5c533787b6e0107293fedc1e20f20f346cede0"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "email_tracker_email_instances" SET "opened_at" = '2012-06-10 21:35:00.000000', "updated_at" = '2012-06-10 21:35:00.518508' WHERE "email_tracker_email_instances"."id" = 3
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["description", ""], ["mailer", "My/Mailer"], ["name", "Mailer My action"], ["owner_id", nil], ["owner_type", nil], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["description", ""], ["mailer", "my_mailer"], ["name", "My Title"], ["owner_id", 1001], ["owner_type", "Subscription"], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["description", ""], ["mailer", "my_mailer"], ["name", "My Name"], ["owner_id", 1002], ["owner_type", "Subscription"], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_emails" ("action", "created_at", "description", "mailer", "name", "owner_id", "owner_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "my_action"], ["created_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00], ["description", ""], ["mailer", "my_mailer"], ["name", "Subscription #1003"], ["owner_id", 1003], ["owner_type", "Subscription"], ["updated_at", Sun, 10 Jun 2012 21:35:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)[0m  [["clicked_at", nil], ["email_instance_id", 2], ["link_id", 3], ["url_code", "0688970683a8dd062a4b0ab6e2a49648e21d3b64"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)  [["clicked_at", nil], ["email_instance_id", 2], ["link_id", 3], ["url_code", "6908e555b9775c36b461ddcfef69346dfef57666"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)[0m  [["clicked_at", nil], ["email_instance_id", 2], ["link_id", 3], ["url_code", "f7373345b2e574c2ee3f0ebc36d96ade66f29426"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  UPDATE "email_tracker_link_instances" SET "clicked_at" = '2012-06-10 21:35:00.000000' WHERE "email_tracker_link_instances"."id" = 3
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "email_tracker_link_instances" WHERE (clicked_at IS NOT NULL)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)  [["clicked_at", nil], ["email_instance_id", 2], ["link_id", 3], ["url_code", "59dc865d92b47a8036daebb15ffaba3022f660f3"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `url_code`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)[0m  [["clicked_at", nil], ["email_instance_id", 2], ["link_id", 3], ["url_code", "6619053acd36e3c25e4721bd9745ab3436ef8cd3"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)  [["clicked_at", nil], ["email_instance_id", 2], ["link_id", 3], ["url_code", "496aff07967391ea04c82d3c3e21cbee743cb394"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mUPDATE "email_tracker_link_instances" SET "clicked_at" = '2012-06-10 21:35:00.000000' WHERE "email_tracker_link_instances"."id" = 2[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `url_code`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "email_tracker_link_instances" ("clicked_at", "email_instance_id", "link_id", "url_code") VALUES (?, ?, ?, ?)  [["clicked_at", nil], ["email_instance_id", 2], ["link_id", 3], ["url_code", "96632e11812c850c72b82a5a7bc28e8007f15398"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "email_tracker_link_instances" SET "clicked_at" = '2012-06-10 21:35:00.000000' WHERE "email_tracker_link_instances"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
