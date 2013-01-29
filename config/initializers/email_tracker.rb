@@ -26,6 +26,8 @@ class ActionMailer::Base
     # This can be overriden by passing :action as part of tracking_data
     tracking_data[:action] ||= caller[0][/`([^']*)'/, 1]
     
+    tracking_data[:subject] ||= headers[:subject]
+    
     # Call the original method and add the tracking_data
     message = mail_without_tracking(headers, &block)
     message.tracking_data = tracking_data

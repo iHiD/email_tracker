@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'benchmark'
+
 module EmailTracker
   describe Interceptor do 
     it "should be registered to deliver mail" do
@@ -11,28 +13,68 @@ module EmailTracker
       TestMailer.test.deliver
     end
     
-    it "should add tracking image" do
-      TestMailer.test.deliver.body.should =~ /<img src="https:\/\/foobar.com\/et_open\/[a-zA-Z0-9]*.gif" alt=""\/>/
+    it "should set mailer, action and extras in tracking_data" do
+      TestMailer.test.tracking_data.should == {
+        mailer: "test_mailer",
+        action: "test",
+        subject: "My Subject",
+        some_data: true
+      }
     end
     
-    it "should not track no-track links" do
-      TestMailer.test.deliver.body.should =~ /<a >A no-track link<\/a>/
+    it "should create an email" do
+      EmailTracker::Email.destroy_all
+      TestMailer.test.deliver
+      
+      EmailTracker::Email.count.should == 1
+      email = EmailTracker::Email.first
+      
+      email.mailer.should == "test_mailer"
+      email.action.should == "test"
+      email.subject.should == "My Subject"
+    end
+  
+    it "should find an existing email" do
+      EmailTracker::Email.destroy_all
+      
+      TestMailer.test.deliver
+      EmailTracker::Email.count.should == 1
+      email = EmailTracker::Email.last
+      email.times_sent.should == 1
+      
+      TestMailer.test.deliver
+      EmailTracker::Email.count.should == 1
+      email.reload
+      email.times_sent.should == 2
+    end
+    
+    it "should add tracking image" do
+      EmailTracker::Email.destroy_all
+      
+      body = TestMailer.test.deliver.body
+      email = EmailTracker::Email.first
+      hashed_email = Base64.encode64("jez.walker@gmail.com").strip[0...-1]
+      TestMailer.test.deliver.body.should include %Q{<img src="https://foobar.com/et/#{email.id}/#{hashed_email}.gif" alt=""/>}
     end
     
     it "should not track mailto links" do
-      TestMailer.test.deliver.body.should =~ /<a href="mailto:jez.walker@gmail.com">A mail link<\/a>/
+      TestMailer.test.deliver.body.should include %Q{<a href="mailto:jez.walker@gmail.com">A mail link</a>}
     end
     
-    it "should track normal links" do      
+    it "should track normal links" do
+      EmailTracker::Email.destroy_all  
+      
       body = TestMailer.test.deliver.body
-      instance = LinkInstance.where(is_externally_viewable: false).last
-      body.should =~ /<a href="https:\/\/foobar.com\/et_click\/#{instance.url_code}">A normal link<\/a>/
+      email = EmailTracker::Email.first
+      hashed_email = Base64.encode64("jez.walker@gmail.com").strip[0...-1]
+      body.should include %Q{a href="https://foobar.com/foobar?et=#{email.id}_#{hashed_email}">A normal link</a>}
     end
     
-    it "should mark external links as such" do      
-      body = TestMailer.test.deliver.body
-      instance = LinkInstance.where(is_externally_viewable: true).last
-      body.should =~ /<a href="https:\/\/foobar.com\/et_click\/#{instance.url_code}">An external link<\/a>/
+    it "should be fast" do
+      
+      Benchmark.measure do |b|
+        80.times { TestMailer.test.deliver }
+      end.real.should be < 1
     end
   end
 end

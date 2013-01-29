@@ -13,40 +13,32 @@
 
 ActiveRecord::Schema.define(:version => 20120610205858) do
 
-  create_table "email_tracker_email_instances", :force => true do |t|
+  create_table "email_tracker_email_opens", :force => true do |t|
     t.integer  "email_id",      :null => false
     t.string   "email_address", :null => false
-    t.string   "url_code",      :null => false
     t.integer  "user_id"
     t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-    t.datetime "opened_at"
   end
 
   create_table "email_tracker_emails", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "mailer",      :null => false
-    t.string   "action",      :null => false
+    t.string   "mailer",                     :null => false
+    t.string   "action",                     :null => false
+    t.string   "subject",    :default => "", :null => false
+    t.string   "string",     :default => "", :null => false
+    t.integer  "times_sent", :default => 0,  :null => false
+    t.integer  "integer",    :default => 0,  :null => false
     t.string   "owner_type"
     t.integer  "owner_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
-  create_table "email_tracker_link_instances", :force => true do |t|
-    t.integer  "link_id",                                   :null => false
-    t.integer  "email_instance_id",                         :null => false
-    t.string   "url_code",                                  :null => false
-    t.boolean  "is_externally_viewable", :default => false, :null => false
-    t.datetime "clicked_at"
-  end
-
-  create_table "email_tracker_links", :force => true do |t|
-    t.string   "url",                       :null => false
-    t.integer  "num_clicks", :default => 0, :null => false
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+  create_table "email_tracker_link_clicks", :force => true do |t|
+    t.integer  "email_id",      :null => false
+    t.string   "email_address", :null => false
+    t.string   "url",           :null => false
+    t.integer  "user_id"
+    t.datetime "created_at",    :null => false
   end
 
   create_table "subscriptions", :force => true do |t|

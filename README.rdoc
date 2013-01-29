@@ -1,6 +1,16 @@
 = Email Tracker
 
-This engine tracks emails in your Ruby on Rails app.
+This engine tracks emails in your Ruby on Rails app.%h3 Installation
+
+== Usage
+
+To use in Rails, simply add this to your Gemfile:
+    gem "national_rail"
+
+The gem should just start running. All emails will have an embedded tracking image and all links will be tracked.
+            
+== Contributing
+Please feel free to fork and modify this code.
 
 == Licence
 

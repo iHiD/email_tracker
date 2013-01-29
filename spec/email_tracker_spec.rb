@@ -15,13 +15,5 @@ describe EmailTracker do
     it "should add alias mail as mail_without_tracking" do
       TestMailer.send(:new).should respond_to :mail_without_tracking
     end
-
-    it "mail set mailer, action and extras in tracking_data" do
-      TestMailer.test.tracking_data.should == {
-        mailer: "test_mailer",
-        action: "test",
-        some_data: true
-      }
-    end
   end
 end
