@@ -5,10 +5,10 @@ module EmailTracker
     belongs_to :email
     belongs_to :user
     
-    attr_accessible :email_id, :email_address, :url, as: :email_tracker_internals
-  
-    def self.for_url(url)
-      self.find_or_create_by_url(url)
+    attr_accessible :email_id, :email_address_hash, :url, as: :email_tracker_internals
+    
+    def email_address_hash=(hash)
+      self.email_address = EmailTracker.retrieve_email_address_from_hash(hash)
     end
   end
 end

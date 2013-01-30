@@ -14,7 +14,5 @@ class CreateEmailTrackerEmails < ActiveRecord::Migration
       t.datetime :created_at, null:false
       t.datetime :updated_at, null:false
     end
-    
-    #add_index :email_tracker_emails, :hash_code
   end
 end

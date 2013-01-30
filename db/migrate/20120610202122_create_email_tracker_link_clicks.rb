@@ -10,5 +10,6 @@ class CreateEmailTrackerLinkClicks < ActiveRecord::Migration
       t.datetime :created_at, null:false
       
     end
+    #add_foreign_key :email_tracker_email_instances, :email_tracker_emails, column: :email_id
   end
 end

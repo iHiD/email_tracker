@@ -9,7 +9,7 @@ class CreateEmailTrackerEmailOpens < ActiveRecord::Migration
       t.datetime :created_at, null:false
     end
     
-    #add_foreign_key :email_tracking_email_instances, :email_tracking_emails, column: :email_id
-    #add_foreign_key :email_tracking_email_instances, :users,                 column: :user_id
+    #add_foreign_key :email_tracker_email_instances, :email_tracker_emails, column: :email_id
+    #add_foreign_key :email_tracker_email_instances, :users,                 column: :user_id
   end
 end

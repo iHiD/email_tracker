@@ -9,7 +9,7 @@ module EmailTracker
     end
     
     it "should call add_tracking" do
-      Interceptor.should_receive(:add_tracking)
+      Interceptor.should_receive(:new)
       TestMailer.test.deliver
     end
     
