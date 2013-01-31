@@ -6,6 +6,12 @@ This engine tracks emails in your Ruby on Rails app.
 
 To use in Rails, simply add this to your Gemfile:
     gem "email_tracker"
+    
+The run the migrations:
+```
+rake email_tracker:install:migrations
+rake rake:db:migrate
+```
 
 The gem should just start running. All emails will have an embedded tracking image and all links will be tracked.
             

@@ -8,7 +8,8 @@ module EmailTracker
   end
   
   def self.retrieve_email_address_from_hash(hash)
-    Base64.decode64("#{hash}=")
+    hash = "#{hash}=" unless hash.ends_with?("=")
+    Base64.decode64(hash)
   end
   
 end

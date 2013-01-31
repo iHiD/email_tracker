@@ -71,7 +71,6 @@ module EmailTracker
     end
     
     it "should be fast" do
-      
       Benchmark.measure do |b|
         80.times { TestMailer.test.deliver }
       end.real.should be < 1

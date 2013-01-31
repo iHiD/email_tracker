@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    email_tracker (0.2.0)
+    email_tracker (0.3.0)
       rails
 
 GEM
