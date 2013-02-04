@@ -3,7 +3,6 @@ module EmailTracker
   class LinkClick < ActiveRecord::Base
   
     belongs_to :email
-    belongs_to :user
     
     attr_accessible :email_id, :email_address_hash, :url, as: :email_tracker_internals
     
