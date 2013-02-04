@@ -9,14 +9,20 @@ module EmailTracker
     protected
     
       def check_for_email_tracker
+        
         begin
           if params[:et]
+            
+            path_without_tracking = request.fullpath.gsub("et=#{CGI.escape(params[:et])}", "").gsub(/[\&\?]$/, "")
+            
             email_id, email_address_hash = params[:et].split("_")
             EmailTracker::LinkClick.create({
               email_id: email_id,
               email_address_hash: email_address_hash,
-              url: request.fullpath.gsub("et=#{params[:et]}", "")[0...-1]
+              url: path_without_tracking
             }, as: :email_tracker_internals)
+            
+            redirect_to path_without_tracking
           end
         rescue
           logger.info $!

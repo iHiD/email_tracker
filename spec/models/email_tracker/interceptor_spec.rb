@@ -53,7 +53,7 @@ module EmailTracker
       
       body = TestMailer.test.deliver.body
       email = EmailTracker::Email.first
-      hashed_email = Base64.encode64("jez.walker@gmail.com").strip[0...-1]
+      hashed_email = Base64.encode64("jez.walker@gmail.com").strip
       TestMailer.test.deliver.body.should include %Q{<img src="https://foobar.com/et/#{email.id}/#{hashed_email}.gif" alt=""/>}
     end
     
@@ -66,7 +66,7 @@ module EmailTracker
       
       body = TestMailer.test.deliver.body
       email = EmailTracker::Email.first
-      hashed_email = Base64.encode64("jez.walker@gmail.com").strip[0...-1]
+      hashed_email = Base64.encode64("jez.walker@gmail.com").strip
       body.should include %Q{a href="https://foobar.com/foobar?et=#{email.id}_#{hashed_email}">A normal link</a>}
     end
     
