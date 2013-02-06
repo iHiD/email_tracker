@@ -12,8 +12,7 @@ module EmailTracker
         
         begin
           if params[:et]
-            
-            path_without_tracking = request.fullpath.gsub("et=#{CGI.escape(params[:et])}", "").gsub(/[\&\?]$/, "")
+            path_without_tracking = request.fullpath.gsub(/et\=[^?&]*/, "").gsub(/[\&\?]$/, "")
             
             email_id, email_address_hash = params[:et].split("_")
             EmailTracker::LinkClick.create({
