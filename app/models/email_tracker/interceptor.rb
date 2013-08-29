@@ -41,7 +41,7 @@ module EmailTracker
           match
         else
           join_symbol = url.include?("?") ? "&" : "?"
-          url = "href=\"" + (url.starts_with?("http") ? "" : @url_base) + "#{url}?et=#{@email.id}_#{@hashed_email_address}\""
+          url = "href=\"" + (url.starts_with?("http") ? "" : @url_base) + "#{url}#{join_symbol}et=#{@email.id}_#{@hashed_email_address}\""
         end
       end
       
