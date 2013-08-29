@@ -70,6 +70,15 @@ module EmailTracker
       body.should include %Q{a href="https://foobar.com/foobar?et=#{email.id}_#{hashed_email}">A normal link</a>}
     end
     
+    it "should append URL parameters if they already exist" do
+      EmailTracker::Email.destroy_all  
+      
+      body = TestMailer.complex_test.deliver.body
+      email = EmailTracker::Email.first
+      hashed_email = Base64.encode64("jez.walker@gmail.com").strip
+      body.should include %Q{a href="https://foobar.com/foobar?foo=bar&et=#{email.id}_#{hashed_email}">A link with existing parameters</a>}
+    end
+    
     it "should be fast" do
       Benchmark.measure do |b|
         80.times { TestMailer.test.deliver }
